@@ -2,7 +2,7 @@
 <img src='https://svgshare.com/i/jfX.svg' alt=''/>
 </div> 
 
-# Аrequently used hooks for React
+# Frequently used hooks for React
 
 ## useDebounce (with lodash)
 
@@ -38,3 +38,47 @@ import {useEffectWithoutFirstCall} from '@npm.piece/hooks'
 useEffectWithoutFirstCall(() => {}, []);
 ```
 
+
+## useSessionStorage
+
+```javascript
+import {useSessionStorage} from '@npm.piece/hooks'
+```
+
+```javascript
+const { get, set } = useSessionStorage('item')
+set({key:"value"})
+get()
+```
+
+## useLocalStorage
+
+```javascript
+import {useLocalStorage} from '@npm.piece/hooks'
+```
+
+```javascript
+const { get, set } = useLocalStorage('item')
+set({key:"value"})
+get()
+```
+
+## usePortraitDetect
+
+```javascript
+import {usePortraitDetect} from '@npm.piece/hooks'
+```
+
+```javascript
+const isPortrait = usePortraitDetect()
+```
+
+## useOnlineDetect
+
+```javascript
+import {useOnlineDetect} from '@npm.piece/hooks'
+```
+
+```javascript
+const isOnline = useOnlineDetect()
+```
