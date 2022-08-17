@@ -15,11 +15,11 @@ export const useMobileSizeDetect = (pixel: number) => {
         setWindowSize(px)
     }, 100)
 
-    useEffect(() => {
-        const handleResize = () => {
-            widthResize(getSize())
-        }
+    const handleResize = () => {
+        widthResize(getSize())
+    }
 
+    useEffect(() => {
         window.addEventListener('resize', handleResize)
         return () => window.removeEventListener('resize', handleResize)
     }, [])
