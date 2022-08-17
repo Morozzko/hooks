@@ -4,7 +4,7 @@ type EventArgument = {
   key: string
 }
 
-export const useKeyPressed = (targetKey: string) => {
+export const useKeyPressDetect = (targetKey: string) => {
   const [keyPressed, setKeyPressed] = useState(false)
 
   const downHandler = ({ key }: EventArgument) => {

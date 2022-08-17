@@ -2,7 +2,7 @@ export * from './useDebounce';
 export * from './useEffectWithoutFirstCall';
 export * from './useFocus';
 export * from './useInterval';
-export * from './useKeyPress';
+export * from './useKeyPressDetect';
 export * from './useLocalStorage';
 export * from './useMobileSizeDetect';
 export * from './useSessionStorage';

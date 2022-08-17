@@ -1,7 +1,7 @@
 import {useEffect, useState} from 'react'
 import {useDebounce} from './useDebounce'
 
-export const useMobileSizeDetect = (pixel: number) => {
+export const useMobileSizeDetect = (pixel: number = 768) => {
     const isClient = typeof window !== 'undefined'
 
     if (!isClient) {

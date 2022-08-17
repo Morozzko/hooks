@@ -82,3 +82,49 @@ import {useOnlineDetect} from '@npm.piece/hooks'
 ```javascript
 const isOnline = useOnlineDetect()
 ```
+
+## useMobileSizeDetect
+
+```javascript
+import {useMobileSizeDetect} from '@npm.piece/hooks'
+```
+
+```javascript
+const isMobileWidth = useMobileSizeDetect(768)
+```
+
+## useKeyPressDetect
+
+```javascript
+import {useKeyPressDetect} from '@npm.piece/hooks'
+```
+
+```javascript
+const isKeyFPressed = useKeyPressDetect("KeyF")
+```
+
+## useInterval
+
+```javascript
+import {useInterval} from '@npm.piece/hooks'
+```
+
+```javascript
+useInterval(() => {}, 1000);
+```
+
+## useFocus
+
+```javascript
+import {useFocus} from '@npm.piece/hooks'
+```
+
+```jsx
+const [htmlElRef, setFocus] = useFocus()
+
+useEffect(()=>{
+    setFocus()
+},[])
+
+return <input ref={htmlElRef}/>
+```

@@ -3,8 +3,6 @@ import {
     useRef,
 } from 'react';
 
-
-
 // useInterval(() => {}, 1000);
 export const useInterval = (callback: (arg?: any) => any, delay: number) => {
     const savedCallback = useRef<(arg?: any) => any>();
