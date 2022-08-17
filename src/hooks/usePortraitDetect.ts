@@ -1,5 +1,4 @@
 import {useEffect, useState} from 'react'
-import {useDebounce} from './useDebounce'
 
 export const usePortraitDetect = () => {
     const isClient = typeof window !== 'undefined'
@@ -10,7 +9,7 @@ export const usePortraitDetect = () => {
 
     const portrait = window.matchMedia("(orientation: portrait)");
     const [isPortrait, setIsPortrait] = useState<boolean>(false)
-    const changeHandler = (event: MediaQueryListEvent) => setIsPortrait(event.matches)
+    const changeHandler = (event: MediaQueryListEvent) => setIsPortrait(!event.matches)
 
     useEffect(() => {
         portrait.addEventListener("change", changeHandler)

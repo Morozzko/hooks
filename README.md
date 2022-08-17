@@ -110,7 +110,7 @@ import {useKeyPressDetect} from '@npm.piece/hooks'
 ```
 
 ```javascript
-const isKeyFPressed = useKeyPressDetect("KeyF")
+const isKeyFPressed = useKeyPressDetect("f")
 ```
 
 ## useInterval
