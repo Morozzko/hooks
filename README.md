@@ -4,6 +4,16 @@
 
 # Frequently used hooks for React
 
+## Install
+
+```
+npm i @npm.piece/hooks
+```
+
+```
+yarn add @npm.piece/hooks
+```
+
 ## useDebounce (with lodash)
 
 ```javascript

@@ -15,7 +15,7 @@
     "debounce",
     "throttle"
   ],
-  "description": "utility for microfrontends",
+  "description": "Frequently used hooks for React",
   "author": "Morozzko",
   "license": "ISC",
   "scripts": {
