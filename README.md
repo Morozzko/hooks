@@ -2,68 +2,39 @@
 <img src='https://svgshare.com/i/jfX.svg' alt=''/>
 </div> 
 
-## Share data from child microfronted to parent without callback hell
+# Аrequently used hooks for React
 
-## Import
-
-```javascript
-import {EventTransfer, useSubscribe} from '@npm.piece/mf-utils'
-```
-
-## Example №1
+## useDebounce (with lodash)
 
 ```javascript
-const [state, setState] = useState('')
-
-const onClickHandler = () => {
-    EventTransfer({
-        data: state + 'PATCH',
-        name: 'mf-1',
-    })
-}
-
-useSubscribe('mf-1', e => setState(e))
+import {useDebounce} from '@npm.piece/hooks'
 ```
-
-```jsx
-    <button onClick={onClickHandler}>send</button>
-    <input
-        value={state}
-        onChange={event => {
-            setState(event.target.value)
-        }}
-    />
-```
-
-## Example №2
 
 ```javascript
-const [state, setState] = useState('')
+const log = useDebounce((params) => console.log(params), 1000);
 
-const onClickHandler = () => {
-    EventTransfer({
-        data: {
-            text: state + 'PATCH',
-        },
-        name: {
-            mfName: 'mf',
-            eventName: '1',
-        },
-        //show console.log with information in devtools
-        debug: true,
-    })
-}
-
-useSubscribe('mf-1', e => setState(e.text))
+log("123")
 ```
 
-```jsx
-    <button onClick={onClickHandler}>send</button>
-    <input
-        value={state}
-        onChange={event => {
-            setState(event.target.value)
-        }}
-    />
+## useThrottle (with lodash)
+
+```javascript
+import {useThrottle} from '@npm.piece/hooks'
+```
+
+```javascript
+const log = useThrottle((params) => console.log(params), 1000);
+
+log("123")
+```
+
+## useEffectWithoutFirstCall
+
+```javascript
+import {useEffectWithoutFirstCall} from '@npm.piece/hooks'
+```
+
+```javascript
+useEffectWithoutFirstCall(() => {}, []);
 ```
 
