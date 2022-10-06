@@ -138,3 +138,16 @@ useEffect(()=>{
 
 return <input ref={htmlElRef}/>
 ```
+
+## useIntersection
+
+```javascript
+import {useIntersection} from '@npm.piece/hooks'
+```
+
+```jsx
+const checkViewPortRef = useRef<HTMLDivElement>(null);
+const isInViewPort = useIntersection(checkViewPortRef);
+
+return <div ref={checkViewPortRef}/>
+```
